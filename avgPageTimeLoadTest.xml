@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="AvgPageLoadTimeTest" verbose="1" parallel="false"
+	thread-count="2" data-provider-thread-count="3">
+
+	<test name="Chrome">
+		<parameter name="browser" value="chrome" />
+		<parameter name="browsername" value="Chrome Browser" />
+		<classes>
+			<!-- <class name="loadtest.AvgPageLoadTimings"> <methods> <include name="welcomePage"></include> 
+				<include name="loginPage"></include> <include name="homePage"></include> 
+				<include name="logoutToLoginPage"></include> </methods> </class> -->
+			<class name="page.Login.google"></class>
+		</classes>
+	</test>
+	<!-- <test name="Firefox"> <parameter name="browser" value="firefox" /> 
+		<parameter name="browsername" value="FireFox Browser" /> <parameter name="loopCount" 
+		value="2" /> <parameter name="waitTime" value="2000" /> <classes> <class 
+		name="loadtest.LoadTestforWithInExptectedTime"></class> </classes> </test> 
+		<test name="IE"> <parameter name="browser" value="ie" /> <parameter name="browsername" 
+		value="IE Browser" /> <parameter name="loopCount" value="10" /> <parameter 
+		name="waitTime" value="3000" /> <classes> <class name="loadtest.AvgPageLoadTimings"></class> 
+		</classes> </test> -->
+</suite>
